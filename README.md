@@ -146,6 +146,6 @@ Key takeaways:
 
 Deterministic belief updates: The lambda-calculus-based update rule reliably converges to the true mean.
 
-Certainty tracking: Fisher information grows with each observation, showing how confident the system becomes over time.
+Certainty tracking: Fisher information grows with each observation, showing confidence growing over time. 
 
 
