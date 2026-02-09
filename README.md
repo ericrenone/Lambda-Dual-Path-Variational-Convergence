@@ -13,7 +13,7 @@ Convergence is evaluated using **information-theoretic drift (KL divergence)** a
 
 ## 🔍 Core Concept
 
-Learning is modeled as a deterministic state machine:
+Learning is modeled as a stochastic dynamical system:
 
 Each update step:
 
