@@ -44,19 +44,24 @@ The **Dual-Path Architecture** separates **fast, reactive updates** from **slow,
 
 ## 🔑 Core Idea
 
-* **Reactive Path (Fast Updates):**  
-  Responds immediately to incoming errors or gradients:  
+\section*{Dual-Path Updates}
 
-  theta_{t+1}^{(1)} = theta_t^{(1)} - eta * grad_t
+\textbf{Reactive Path (Fast Updates):} \\
+The reactive path responds immediately to incoming errors or gradients:
+\begin{equation}
+\theta_{t+1}^{(1)} = \theta_t^{(1)} - \eta \cdot \text{grad}_t
+\end{equation}
 
-* **Adaptive Path (Gain-Controlled Updates):**  
-  Modulates update magnitude via a dynamic gain, suppressing stochastic variance while maintaining convergence:  
+\textbf{Adaptive Path (Gain-Controlled Updates):} \\
+The adaptive path modulates the update magnitude via a dynamic gain, suppressing stochastic variance while maintaining convergence:
+\begin{align}
+\theta_{t+1}^{(2)} &= \theta_t^{(2)} - \eta \cdot \alpha_t \cdot \text{grad}_t, \\
+\alpha_{t+1} &= \max\Big(\alpha_{\min}, \ \gamma \cdot \alpha_t + f\big(|\text{grad}_t|\big)\Big)
+\end{align}
 
-  theta_{t+1}^{(2)} = theta_t^{(2)} - eta * alpha_t * grad_t  
-  alpha_{t+1} = max(alpha_min, gamma * alpha_t + f(|grad_t|))
+\textbf{Key Benefit:} \\
+By decoupling the paths, the system achieves \textbf{fast error correction without amplifying noise}, ensuring stable convergence under stochastic conditions.
 
-* **Key Benefit:**  
-  By decoupling the paths, the system achieves **fast error correction without amplifying noise**, ensuring stable convergence under stochastic conditions.
 
 
 
