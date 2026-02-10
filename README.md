@@ -36,7 +36,7 @@ DPFAE is grounded in **four pillars of mathematical and physical inspiration**:
    - Update rules can be conceptually viewed as **first-class functions**, emphasizing composability and modularity of reactive vs. adaptive paths.  
    - This perspective informs the design of **decoupled, composable update operators**, but is **not literally implemented** in code.  
 
-> ⚠️ Note: Ergodic theory, Čencov, FEP, and Lambda Calculus are **design inspirations**, not literal computations in code.
+> Ergodic theory, Čencov, FEP, and Lambda Calculus are **design inspirations**, not literal computations in code.
 
 ---
 
