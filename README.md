@@ -46,19 +46,18 @@ The **Dual-Path Architecture** separates **fast, reactive updates** from **slow,
 
 * **Reactive Path (Fast Updates):**  
   Responds immediately to incoming errors or gradients:  
-  $$
-  \theta_{t+1}^{(1)} = \theta_t^{(1)} - \eta \cdot \text{grad}_t
-  $$
+
+  theta_{t+1}^{(1)} = theta_t^{(1)} - eta * grad_t
 
 * **Adaptive Path (Gain-Controlled Updates):**  
   Modulates update magnitude via a dynamic gain, suppressing stochastic variance while maintaining convergence:  
-  $$
-  \theta_{t+1}^{(2)} = \theta_t^{(2)} - \eta \cdot \alpha_t \cdot \text{grad}_t, \quad
-  \alpha_{t+1} = \max\big(\alpha_{\min}, \ \gamma \cdot \alpha_t + f(|\text{grad}_t|)\big)
-  $$
+
+  theta_{t+1}^{(2)} = theta_t^{(2)} - eta * alpha_t * grad_t  
+  alpha_{t+1} = max(alpha_min, gamma * alpha_t + f(|grad_t|))
 
 * **Key Benefit:**  
   By decoupling the paths, the system achieves **fast error correction without amplifying noise**, ensuring stable convergence under stochastic conditions.
+
 
 
 ---
