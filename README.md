@@ -32,7 +32,7 @@ DPFAE is grounded in **three pillars of mathematical and physical inspiration**:
    - Gain adaptation (\(\alpha_t\)) mimics **inverse temperature control**, analogous to minimizing Gibbs free energy in hardware.  
    - Updates balance sensitivity and stability, reducing unnecessary switching in silicon while maintaining fast convergence.  
 
-> ⚠️ Note: Ergodic theory, Čencov, and FEP are **design inspirations**, not literal PDE or matrix computations in code.
+> ⚠️ Note: Ergodic theory, Čencov, and FEP are **design inspirations**, not PDE/matrix computations in code.
 
 ---
 
